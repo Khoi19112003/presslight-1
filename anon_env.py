@@ -765,14 +765,14 @@ class AnonEnv:
 
             before_action_feature = self.get_feature()
             # state = self.get_state()
-
+            """
             if self.dic_traffic_env_conf['DEBUG']:
                 print("time: {0}".format(instant_time))
             else:
 
                 if i == 0:
                     print("time: {0}".format(instant_time))
-
+            """
             self._inner_step(action_in_sec,test_flag)
 
 
@@ -794,7 +794,7 @@ class AnonEnv:
 
             next_state, done = self.get_state()
 
-        print("Step time: ", time.time() - step_start_time)
+        #print("Step time: ", time.time() - step_start_time)
         return next_state, reward, done, average_reward_action_list
 
     def _inner_step(self, action,test_flag):

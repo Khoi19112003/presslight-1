@@ -81,8 +81,8 @@ class Generator:
             next_state, reward, done, _ = self.env.step(action_list,False)
 
 
-            print("time: {0}, running_time: {1}".format(self.env.get_current_time()-self.dic_traffic_env_conf["MIN_ACTION_TIME"],
-                                                        time.time()-step_start_time))
+            #print("time: {0}, running_time: {1}".format(self.env.get_current_time()-self.dic_traffic_env_conf["MIN_ACTION_TIME"],
+            #                                           time.time()-step_start_time))
 
             state = next_state
             step_num += 1

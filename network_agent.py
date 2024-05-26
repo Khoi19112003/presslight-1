@@ -257,10 +257,11 @@ class NetworkAgent(Agent):
             _next_state = []
             for feature_name in self.dic_traffic_env_conf["LIST_STATE_FEATURE"]:
                 _state.append([state[feature_name]])
-                _next_state.append([next_state[feature_name]])
-            target = self.q_network.predict(_state)
+                _next_state.append([next_state[feature_name]]) 
+            #target = self.q_network.predict(_state)
+            target = self.q_network.predict([np.array(x) for x in _state])
 
-            next_state_qvalues = self.q_network_bar.predict(_next_state)
+            next_state_qvalues = self.q_network_bar.predict([np.array(x) for x in _next_state])
 
             if self.dic_agent_conf["LOSS_FUNCTION"] == "mean_squared_error":
                 final_target = np.copy(target[0])

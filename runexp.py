@@ -431,6 +431,6 @@ def main(args = None):
 if __name__ == "__main__":
     args = parse_args()
     os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
-
+    print(args)
     main(args)
 
