@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "presslight",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "CityFlow-master"
+	}
+}
